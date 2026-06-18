@@ -148,26 +148,111 @@ $portfolioData = function () {
                 'title' => 'Mobile Application Development',
                 'summary' => 'Android application work from Bangkit Academy with clean architecture, cloud integration, and team delivery.',
                 'items' => ['Kotlin', 'MVVM Android', 'Firebase Authentication', 'Firestore', 'Google Cloud Speech API', 'REST API Integration'],
+                'types' => [
+                    [
+                        'name' => 'Android App Architecture',
+                        'detail' => 'Build maintainable Android flows using Kotlin, OOP, MVVM, modular UI structure, and clean separation between view, data, and logic.',
+                        'tools' => ['Kotlin', 'MVVM', 'OOP', 'Android Studio', 'Git'],
+                    ],
+                    [
+                        'name' => 'Cloud-Connected Mobile Features',
+                        'detail' => 'Connect mobile experiences to authentication, database, and cloud services for account-based app behavior.',
+                        'tools' => ['Firebase Auth', 'Firestore', 'Google Cloud', 'REST API'],
+                    ],
+                    [
+                        'name' => 'Speech and Learning Product Features',
+                        'detail' => 'Implement speech-driven app features with scoring, feedback loops, and product logic for learning experiences.',
+                        'tools' => ['Speech API', 'NLP Scoring', 'UX Flow', 'Testing'],
+                    ],
+                ],
             ],
             [
                 'title' => 'Web & Frontend Engineering',
                 'summary' => 'Frontend implementation for practical web products, including routing, account-based flows, and API-backed interfaces.',
                 'items' => ['Vue.js', 'JavaScript', 'HTML', 'CSS', 'Firebase', 'URL Validation', 'Component Architecture'],
+                'types' => [
+                    [
+                        'name' => 'Frontend Interface Development',
+                        'detail' => 'Create responsive web interfaces with reusable components, clear navigation, and maintainable styling.',
+                        'tools' => ['Vue.js', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
+                    ],
+                    [
+                        'name' => 'Auth and Data-Backed Web Apps',
+                        'detail' => 'Build account-based workflows that connect frontend routes to authentication and cloud-hosted data.',
+                        'tools' => ['Firebase Auth', 'Firestore', 'Vue Router', 'State Flow'],
+                    ],
+                    [
+                        'name' => 'Validation and Safe User Input',
+                        'detail' => 'Add practical validation for forms, URLs, redirects, and user-generated inputs before they reach storage or navigation logic.',
+                        'tools' => ['URL Validation', 'Form Logic', 'Redirect Rules', 'Testing'],
+                    ],
+                ],
             ],
             [
                 'title' => 'Networking & Infrastructure',
                 'summary' => 'Academic network architecture labs covering routing, subnet planning, topology testing, and troubleshooting.',
                 'items' => ['TCP/IP', 'Subnetting', 'OSPF Routing', 'VLAN', 'NAT', 'Wireshark', 'Cisco Packet Tracer', 'Linux Configuration'],
+                'types' => [
+                    [
+                        'name' => 'Network Design and Subnet Planning',
+                        'detail' => 'Plan network topologies with subnet allocation, VLSM/CIDR decisions, and address-space documentation.',
+                        'tools' => ['TCP/IP', 'Subnetting', 'VLSM', 'CIDR'],
+                    ],
+                    [
+                        'name' => 'Routing and Service Configuration',
+                        'detail' => 'Configure routing and infrastructure scenarios across multi-router and Linux-based lab environments.',
+                        'tools' => ['OSPF', 'Static Routing', 'NAT', 'DNS', 'Linux'],
+                    ],
+                    [
+                        'name' => 'Troubleshooting and Packet Analysis',
+                        'detail' => 'Inspect traffic behavior, identify configuration issues, and document root causes with lab evidence.',
+                        'tools' => ['Wireshark', 'Packet Tracer', 'Ping/Traceroute', 'Log Review'],
+                    ],
+                ],
             ],
             [
                 'title' => 'Technical Analysis & Documentation',
                 'summary' => 'Structured investigation, reporting, evidence-minded thinking, and clear technical documentation for project handoff.',
                 'items' => ['Problem Analysis', 'Technical Reporting', 'Digital Forensics Basics', 'NIST SP 800-86', 'Timeline Analysis', 'Postman API Testing'],
+                'types' => [
+                    [
+                        'name' => 'Structured Technical Investigation',
+                        'detail' => 'Break unclear technical problems into evidence, workflow, timeline, and finding sections.',
+                        'tools' => ['Problem Framing', 'Timeline Analysis', 'Root Cause Notes'],
+                    ],
+                    [
+                        'name' => 'API and System Validation',
+                        'detail' => 'Check whether system behavior matches requirements using request testing, result comparison, and repeatable notes.',
+                        'tools' => ['Postman', 'API Testing', 'Test Cases', 'Result Logs'],
+                    ],
+                    [
+                        'name' => 'Documentation and Reporting',
+                        'detail' => 'Turn project work into readable reports, handoff notes, SOPs, and evidence-backed summaries.',
+                        'tools' => ['Technical Writing', 'SOPs', 'Research Reports', 'NIST SP 800-86'],
+                    ],
+                ],
             ],
             [
                 'title' => 'Team & Project Coordination',
                 'summary' => 'Leadership experience from HMIT, BEM FTEIC ITS, and ARA, focused on systems, training, delegation, and execution.',
                 'items' => ['Agile Collaboration', 'Git Workflow', 'Program Planning', 'Performance Dashboards', 'SOP Documentation', 'Stakeholder Coordination'],
+                'types' => [
+                    [
+                        'name' => 'Agile and Git-Based Team Delivery',
+                        'detail' => 'Coordinate tasks, branches, communication, and iterative delivery across student and capstone teams.',
+                        'tools' => ['Agile Scrum', 'Git Workflow', 'Task Breakdown', 'Review'],
+                    ],
+                    [
+                        'name' => 'People Operations and Training Systems',
+                        'detail' => 'Design regeneration, leadership, onboarding, and development programs with measurable follow-up.',
+                        'tools' => ['Talent Mapping', 'Training Design', 'Mentoring', 'Evaluation'],
+                    ],
+                    [
+                        'name' => 'Operational Planning and Execution',
+                        'detail' => 'Manage events, resources, vendors, committee work, SOPs, and dashboards for large participant programs.',
+                        'tools' => ['Program Planning', 'Dashboards', 'Vendor Coordination', 'SOPs'],
+                    ],
+                ],
             ],
         ],
         'timeline' => [

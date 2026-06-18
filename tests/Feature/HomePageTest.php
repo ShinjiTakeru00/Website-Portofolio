@@ -16,6 +16,9 @@ class HomePageTest extends TestCase
         $response->assertSee('Selected technical work');
         $response->assertSee('Five practical capability areas');
         $response->assertSee('Mobile Application Development');
+        $response->assertSee('show all types');
+        $response->assertSee('Android App Architecture');
+        $response->assertSee('Network Design and Subnet Planning');
         $response->assertSee('~/about');
         $response->assertSee('~/projects');
         $response->assertDontSee('CV_Evan_Darya_Kusuma.pdf');
@@ -28,6 +31,7 @@ class HomePageTest extends TestCase
         $response->assertOk();
         $response->assertSee('Software, networks, analysis, and practical delivery');
         $response->assertSee('Five expandable capability areas');
+        $response->assertSee('Operational Planning and Execution');
         $response->assertSee('Institut Teknologi Sepuluh Nopember');
         $response->assertSee('Himpunan Mahasiswa Teknologi Informasi ITS');
     }
