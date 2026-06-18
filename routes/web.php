@@ -1,0 +1,268 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+$portfolioData = function () {
+    return [
+        'profile' => [
+            'name' => 'Evan Darya Kusuma',
+            'role' => 'Information Technology Graduate / Software & Network Engineering',
+            'location' => 'Surabaya, East Java',
+            'intro' => 'Information Technology graduate from Institut Teknologi Sepuluh Nopember with hands-on experience across mobile development, web applications, networking labs, technical documentation, and security-aware system design.',
+            'email' => 'evankusuma00@gmail.com',
+            'phone' => '08970320550',
+            'links' => [
+                ['label' => 'GitHub', 'url' => 'https://github.com/ShinjiTakeru00'],
+                ['label' => 'LinkedIn', 'url' => 'https://www.linkedin.com/in/evankusuma00'],
+            ],
+        ],
+        'projects' => [
+            [
+                'title' => 'Android Mobile Forensics Validation',
+                'type' => 'Digital Forensics / Academic Research',
+                'description' => 'Implemented the NIST SP 800-86 method to validate mobile forensic investigation workflows on Android device evidence in a POLDA Jawa Timur case study.',
+                'outcome' => 'Performed forensic acquisition, artifact extraction, hash validation, timeline analysis, and chain-of-custody documentation to support investigative findings.',
+                'tags' => ['NIST SP 800-86', 'DFIR', 'Android Forensics', 'Cellebrite', 'FTK Imager'],
+                'year' => '2025',
+                'status' => 'Thesis project',
+                'role' => 'DFIR Analyst',
+                'repo_url' => null,
+                'repo_links' => [],
+                'bullets' => [
+                    'Performed Android evidence acquisition using Cellebrite UFED, ADB, and FTK Imager.',
+                    'Validated evidence integrity using MD5 and SHA-256 hashing.',
+                    'Analyzed WhatsApp artifacts, PDF documents, and timeline activity.',
+                ],
+            ],
+            [
+                'title' => 'Speaktoo',
+                'type' => 'Bangkit Capstone / Mobile Development',
+                'description' => 'Built an Android English pronunciation learning app using speech recognition and real-time feedback to personalize the learning experience.',
+                'outcome' => 'Delivered a production-level mobile app in a cross-functional team of six using Agile Scrum, Git-based workflow, Kotlin, MVVM architecture, and Google Cloud Speech API integration.',
+                'tags' => ['Kotlin', 'MVVM', 'Firebase', 'Google Cloud', 'Speech API'],
+                'year' => '2024',
+                'status' => 'Capstone project',
+                'role' => 'Mobile Developer',
+                'repo_url' => 'https://github.com/ShinjiTakeru00/speaktoo-bangkit2024',
+                'repo_links' => [],
+                'bullets' => [
+                    'Integrated Speech-to-Text and NLP scoring logic for pronunciation feedback.',
+                    'Built authentication and cloud sync with Firebase Authentication and Firestore.',
+                    'Designed modular UI components for maintainability and future feature growth.',
+                ],
+            ],
+            [
+                'title' => 'AWIKWOK Link Shortener',
+                'type' => 'Frontend Web Application',
+                'description' => 'Developed a short-link management platform with Vue.js, Vue Router, Firebase Authentication, and Firestore storage.',
+                'outcome' => 'Applied URL validation and restricted redirect handling to reduce malicious input risk and support safer short-link generation.',
+                'tags' => ['Vue.js', 'Firebase', 'Firestore', 'Authentication', 'Security'],
+                'year' => '2024',
+                'status' => 'Web project',
+                'role' => 'Frontend Developer',
+                'repo_url' => 'https://github.com/ShinjiTakeru00/Short_Link_FP_Pemweb',
+                'repo_links' => [],
+                'bullets' => [
+                    'Built reusable frontend components and route-based navigation.',
+                    'Connected Firebase services for secure link storage and access control.',
+                    'Implemented input validation for safer redirect behavior.',
+                ],
+            ],
+            [
+                'title' => 'Network Simulation and Routing Labs',
+                'type' => 'Networking / Academic Projects',
+                'description' => 'Designed and configured subnetting, static routing, OSPF, VLAN segmentation, and multi-router network scenarios.',
+                'outcome' => 'Tested topologies and troubleshooting workflows using Cisco Packet Tracer and Wireshark, then analyzed traffic patterns to optimize routing performance.',
+                'tags' => ['TCP/IP', 'OSPF', 'VLAN', 'Wireshark', 'Cisco Packet Tracer'],
+                'year' => '2023',
+                'status' => 'Academic labs',
+                'role' => 'Network Engineer',
+                'repo_url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-5-IT16',
+                'repo_links' => [
+                    ['label' => 'Module 1', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-1-IT16-2023'],
+                    ['label' => 'Module 2', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-2-IT16-2023'],
+                    ['label' => 'Module 3', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-3-IT16-2023'],
+                    ['label' => 'Module 4', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-4-IT16-2023'],
+                    ['label' => 'Module 5', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-5-IT16'],
+                ],
+                'bullets' => [
+                    'Configured routing and segmentation across multi-router scenarios.',
+                    'Troubleshot packet flow and network behavior with Wireshark.',
+                    'Documented topology decisions and performance observations.',
+                ],
+            ],
+            [
+                'title' => 'Quantum Computing Notebook',
+                'type' => 'Academic Computing',
+                'description' => 'Explored quantum computing concepts and exercises through Jupyter Notebook-based coursework.',
+                'outcome' => 'Created an academic notebook repository for experimenting with quantum computing foundations and computational exercises.',
+                'tags' => ['Jupyter Notebook', 'Quantum Computing', 'Academic Project'],
+                'year' => '2024',
+                'status' => 'Coursework repository',
+                'role' => 'Notebook Author',
+                'repo_url' => 'https://github.com/ShinjiTakeru00/QuantumComputing',
+                'repo_links' => [],
+                'bullets' => [
+                    'Organized quantum computing practice work in a reproducible notebook format.',
+                    'Used notebook-based exploration for technical documentation and experimentation.',
+                    'Maintained the project as a public academic reference on GitHub.',
+                ],
+            ],
+            [
+                'title' => 'Pemrograman Integratif',
+                'type' => 'Python / Integrative Programming',
+                'description' => 'A Python coursework repository for integrative programming practice and implementation exercises.',
+                'outcome' => 'Built a public record of Python-based coursework that supports the software engineering side of the portfolio.',
+                'tags' => ['Python', 'Programming', 'Coursework'],
+                'year' => '2023',
+                'status' => 'Coursework repository',
+                'role' => 'Python Developer',
+                'repo_url' => 'https://github.com/ShinjiTakeru00/Pemrograman-Integratif',
+                'repo_links' => [],
+                'bullets' => [
+                    'Practiced Python implementation patterns in an academic setting.',
+                    'Maintained code examples as part of integrative programming coursework.',
+                    'Added a public GitHub artifact that complements security and networking work.',
+                ],
+            ],
+        ],
+        'githubRepos' => [
+            ['name' => 'speaktoo-bangkit2024', 'description' => 'Bangkit Academy capstone project for English pronunciation learning.', 'language' => 'Kotlin, JavaScript, Python', 'url' => 'https://github.com/ShinjiTakeru00/speaktoo-bangkit2024'],
+            ['name' => 'Short_Link_FP_Pemweb', 'description' => 'Vue short-link management project with account-based link storage.', 'language' => 'Vue, JavaScript, CSS', 'url' => 'https://github.com/ShinjiTakeru00/Short_Link_FP_Pemweb'],
+            ['name' => 'Jarkom-Modul-1-IT16-2023', 'description' => 'Computer networking practicum covering packet analysis and FTP traffic investigation.', 'language' => 'Networking documentation', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-1-IT16-2023'],
+            ['name' => 'Jarkom-Modul-2-IT16-2023', 'description' => 'Networking practicum with DNS, NAT, load balancer, and web server topology work.', 'language' => 'Networking documentation', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-2-IT16-2023'],
+            ['name' => 'Jarkom-Modul-3-IT16-2023', 'description' => 'Networking practicum documentation for server and infrastructure configuration exercises.', 'language' => 'Networking documentation', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-3-IT16-2023'],
+            ['name' => 'Jarkom-Modul-4-IT16-2023', 'description' => 'VLSM and CIDR routing topology practicum with subnet planning.', 'language' => 'Networking documentation', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-4-IT16-2023'],
+            ['name' => 'Jarkom-Modul-5-IT16', 'description' => 'Advanced networking practicum with VLSM topology, subnetting, and Linux network configuration.', 'language' => 'Networking documentation', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-5-IT16'],
+            ['name' => 'QuantumComputing', 'description' => 'Jupyter Notebook repository for quantum computing coursework.', 'language' => 'Jupyter Notebook', 'url' => 'https://github.com/ShinjiTakeru00/QuantumComputing'],
+            ['name' => 'Pemrograman-Integratif', 'description' => 'Python coursework for integrative programming exercises.', 'language' => 'Python', 'url' => 'https://github.com/ShinjiTakeru00/Pemrograman-Integratif'],
+            ['name' => 'Strukdat', 'description' => 'C++ data structures coursework repository.', 'language' => 'C++', 'url' => 'https://github.com/ShinjiTakeru00/Strukdat'],
+            ['name' => 'BotKripto', 'description' => 'Early cryptocurrency bot experiment repository.', 'language' => 'Project archive', 'url' => 'https://github.com/ShinjiTakeru00/BotKripto'],
+            ['name' => 'iTorrent', 'description' => 'Forked iOS torrent client repository kept in the GitHub archive.', 'language' => 'Repository archive', 'url' => 'https://github.com/ShinjiTakeru00/iTorrent'],
+        ],
+        'skills' => [
+            'Mobile Development', 'Web Development', 'Networking', 'Technical Analysis', 'Project Leadership',
+        ],
+        'skillGroups' => [
+            [
+                'title' => 'Mobile Application Development',
+                'summary' => 'Android application work from Bangkit Academy with clean architecture, cloud integration, and team delivery.',
+                'items' => ['Kotlin', 'MVVM Android', 'Firebase Authentication', 'Firestore', 'Google Cloud Speech API', 'REST API Integration'],
+            ],
+            [
+                'title' => 'Web & Frontend Engineering',
+                'summary' => 'Frontend implementation for practical web products, including routing, account-based flows, and API-backed interfaces.',
+                'items' => ['Vue.js', 'JavaScript', 'HTML', 'CSS', 'Firebase', 'URL Validation', 'Component Architecture'],
+            ],
+            [
+                'title' => 'Networking & Infrastructure',
+                'summary' => 'Academic network architecture labs covering routing, subnet planning, topology testing, and troubleshooting.',
+                'items' => ['TCP/IP', 'Subnetting', 'OSPF Routing', 'VLAN', 'NAT', 'Wireshark', 'Cisco Packet Tracer', 'Linux Configuration'],
+            ],
+            [
+                'title' => 'Technical Analysis & Documentation',
+                'summary' => 'Structured investigation, reporting, evidence-minded thinking, and clear technical documentation for project handoff.',
+                'items' => ['Problem Analysis', 'Technical Reporting', 'Digital Forensics Basics', 'NIST SP 800-86', 'Timeline Analysis', 'Postman API Testing'],
+            ],
+            [
+                'title' => 'Team & Project Coordination',
+                'summary' => 'Leadership experience from HMIT, BEM FTEIC ITS, and ARA, focused on systems, training, delegation, and execution.',
+                'items' => ['Agile Collaboration', 'Git Workflow', 'Program Planning', 'Performance Dashboards', 'SOP Documentation', 'Stakeholder Coordination'],
+            ],
+        ],
+        'timeline' => [
+            ['year' => '2025', 'title' => 'Bachelors Degree in Information Technology', 'detail' => 'Graduated from Institut Teknologi Sepuluh Nopember with GPA 3.55/4.00 and a thesis on NIST-based Android forensic investigation validation.'],
+            ['year' => '2024', 'title' => 'Bangkit Academy Mobile Developer Cohort', 'detail' => 'Completed Android development, clean architecture, REST API, Firebase, GCP foundations, Agile, and leadership training.'],
+            ['year' => '2023 - 2024', 'title' => 'Head of Human Resource Development, HMIT ITS', 'detail' => 'Led HR development for 60+ members in the first term and 80+ members in the second term, improving retention and coordination through structured HR systems.'],
+        ],
+        'experiences' => [
+            [
+                'organization' => 'Himpunan Mahasiswa Teknologi Informasi ITS (HMIT)',
+                'role' => 'Head of Human Resource Development (2 Terms)',
+                'period' => 'Feb 2023 - Nov 2024',
+                'details' => [
+                    'Led HR development initiatives for 60+ members in term one and 80+ members in term two with 7-8 HR staff.',
+                    'Directed DECLARE 3.0, DECLARE 4.0, and IT BOOST to strengthen regeneration, career preparation, and member development.',
+                    'Implemented performance evaluation dashboards, onboarding systems, talent mapping, HR database documentation, and SOP standardization.',
+                ],
+            ],
+            [
+                'organization' => 'BEM FTEIC ITS',
+                'role' => 'Managerial Trainer',
+                'period' => 'May 2023 - Sep 2024',
+                'details' => [
+                    'Facilitated leadership and organizational development training for 600+ participants across intensive learning sessions.',
+                    'Mentored 40-50 participants in advanced leadership training and team coordination modules.',
+                    'Managed PPLKM IV FTEIC as project manager with 35 committee members for an 80-participant leadership program.',
+                ],
+            ],
+            [
+                'organization' => 'A Renewal Agent 3.0 (ARA)',
+                'role' => 'Expert Staff of Equipment',
+                'period' => 'Oct 2022 - May 2023',
+                'details' => [
+                    'Coordinated logistics and technical operations for a university-scale event with 500+ participants.',
+                    'Managed vendor relationships across five external partners.',
+                    'Improved setup efficiency through equipment scheduling and resource allocation.',
+                ],
+            ],
+        ],
+        'education' => [
+            [
+                'school' => 'Institut Teknologi Sepuluh Nopember',
+                'degree' => 'Bachelor of Information Technology',
+                'period' => 'Aug 2021 - Sep 2025',
+                'detail' => 'GPA 3.55/4.00. Relevant courses include Cyber Security, Cloud Computing Technology, IT Project Management, and Artificial Intelligence.',
+            ],
+            [
+                'school' => 'Bangkit Academy by Google, GoTo, Traveloka',
+                'degree' => 'Mobile Developer Cohort',
+                'period' => 'Feb 2024 - Jul 2024',
+                'detail' => 'Studied Android development with Kotlin, OOP, MVVM clean architecture, REST API and Firebase integration, GCP foundations, Agile, product, and professional communication.',
+            ],
+        ],
+        'principles' => [
+            ['title' => 'Structured problem solver', 'detail' => 'Comfortable breaking technical problems into systems, workflows, artifacts, and measurable next steps.'],
+            ['title' => 'Security-aware builder', 'detail' => 'Brings security awareness into software and networking work without making every project security-only.'],
+            ['title' => 'Leadership through systems', 'detail' => 'Uses structured evaluation, dashboards, SOPs, and clear coordination to improve team execution.'],
+        ],
+        'services' => [
+            'Mobile and web application development',
+            'Network simulation, routing, and troubleshooting',
+            'Technical documentation and analysis',
+            'Security-aware implementation and testing',
+        ],
+        'languages' => [
+            'Indonesian (Native)',
+            'English (Professional Proficiency)',
+        ],
+    ];
+};
+
+Route::get('/', function () use ($portfolioData) {
+    ['profile' => $profile, 'projects' => $projects, 'skillGroups' => $skillGroups, 'timeline' => $timeline] = $portfolioData();
+
+    return view('portfolio', compact('profile', 'projects', 'skillGroups', 'timeline'));
+})->name('home');
+
+Route::get('/about', function () use ($portfolioData) {
+    [
+        'profile' => $profile,
+        'skills' => $skills,
+        'skillGroups' => $skillGroups,
+        'timeline' => $timeline,
+        'principles' => $principles,
+        'services' => $services,
+        'experiences' => $experiences,
+        'education' => $education,
+        'languages' => $languages,
+    ] = $portfolioData();
+
+    return view('about', compact('profile', 'skills', 'skillGroups', 'timeline', 'principles', 'services', 'experiences', 'education', 'languages'));
+})->name('about');
+
+Route::get('/projects', function () use ($portfolioData) {
+    ['profile' => $profile, 'projects' => $projects, 'githubRepos' => $githubRepos] = $portfolioData();
+
+    return view('projects', compact('profile', 'projects', 'githubRepos'));
+})->name('projects');

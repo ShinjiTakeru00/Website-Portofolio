@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-width: 320px;
+        overflow-x: hidden;
+        background: #070b0f;
+        color: #f2f7f4;
+        background-image:
+            linear-gradient(rgba(110, 231, 183, 0.045) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(110, 231, 183, 0.035) 1px, transparent 1px);
+        background-size: 42px 42px;
+    }
+
+    ::selection {
+        background: #6ee7b7;
+        color: #070b0f;
+    }
+}
+
+@layer components {
+    .section-shell {
+        @apply mx-auto box-border w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+    }
+
+    .section-shell > * {
+        min-width: 0;
+    }
+
+    .eyebrow {
+        @apply font-mono text-xs font-bold uppercase tracking-[0.18em] text-terminal;
+    }
+
+    .btn-primary {
+        @apply inline-flex min-h-12 items-center justify-center gap-2 border border-terminal bg-terminal px-5 font-mono text-sm font-bold text-ink transition hover:border-cyan hover:bg-cyan focus:outline-none focus:ring-4 focus:ring-terminal/20;
+    }
+
+    .btn-secondary {
+        @apply inline-flex min-h-12 items-center justify-center gap-2 border border-line bg-panel/70 px-5 font-mono text-sm font-bold text-paper transition hover:border-terminal hover:bg-terminal hover:text-ink focus:outline-none focus:ring-4 focus:ring-terminal/20;
+    }
+
+    .nav-link {
+        @apply font-mono text-xs font-semibold uppercase tracking-[0.14em] transition hover:text-terminal;
+    }
+
+    .tech-section {
+        @apply bg-ink text-paper;
+    }
+
+    .tech-panel {
+        @apply border border-line bg-panel shadow-glow;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .tech-card {
+        @apply border border-line bg-panel transition hover:-translate-y-1 hover:border-terminal hover:shadow-glow;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .terminal-bar {
+        @apply flex min-h-10 items-center justify-between border-b border-line bg-ink/70 px-4 font-mono text-xs text-paper/60;
+    }
+
+    .terminal-dot {
+        @apply size-2.5 border border-line;
+    }
+
+    .scanline {
+        background-image: linear-gradient(rgba(242, 247, 244, 0.035) 1px, transparent 1px);
+        background-size: 100% 4px;
+    }
+
+    .code-chip {
+        @apply border border-line bg-ink/70 px-3 py-1 font-mono text-xs font-bold text-paper/70;
+    }
+}
