@@ -196,8 +196,8 @@ $portfolioData = function () {
             [
                 'title' => 'Web & Frontend Engineering',
                 'summary' => 'Frontend implementation for practical web products, including routing, account-based flows, and API-backed interfaces.',
-                'image' => 'images/UI UX.png',
-                'image_alt' => 'High-fidelity UI/UX screen board representing frontend design work',
+                'image' => 'images/capability-web-frontend.png',
+                'image_alt' => 'Screenshot of this portfolio website representing frontend engineering work',
                 'image_fit' => 'cover',
                 'items' => ['Vue.js', 'JavaScript', 'HTML', 'CSS', 'Firebase', 'URL Validation', 'Component Architecture'],
                 'types' => [

@@ -17,7 +17,7 @@ class HomePageTest extends TestCase
         $response->assertSee('Five practical capability areas');
         $response->assertSee('Mobile Application Development');
         $response->assertSee('images/Speaktoo.png');
-        $response->assertSee('images/UI UX.png');
+        $response->assertSee('images/capability-web-frontend.png');
         $response->assertSee('Team &amp; Project Coordination', false);
         $response->assertDontSee('Interface planning board representing coordinated project delivery');
         $response->assertSee('show all types');
