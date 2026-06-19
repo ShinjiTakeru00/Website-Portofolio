@@ -271,8 +271,8 @@ $portfolioData = function () {
             [
                 'title' => 'Team & Project Coordination',
                 'summary' => 'Leadership experience from HMIT, BEM FTEIC ITS, and ARA, focused on systems, training, delegation, and execution.',
-                'image' => 'images/UI UX.png',
-                'image_alt' => 'Interface planning board representing coordinated project delivery',
+                'image' => null,
+                'image_alt' => null,
                 'image_fit' => 'cover',
                 'items' => ['Agile Collaboration', 'Git Workflow', 'Program Planning', 'Performance Dashboards', 'SOP Documentation', 'Stakeholder Coordination'],
                 'types' => [
