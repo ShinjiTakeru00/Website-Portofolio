@@ -80,6 +80,11 @@
                 <div class="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                     @foreach ($projects as $project)
                         <article class="tech-card p-5">
+                            @if ($project['image'])
+                                <div class="mb-5 aspect-[16/10] overflow-hidden border border-line bg-ink">
+                                    <img src="{{ asset($project['image']) }}" alt="{{ $project['image_alt'] }}" class="h-full w-full {{ $project['image_fit'] === 'contain' ? 'object-contain p-5' : 'object-cover' }}">
+                                </div>
+                            @endif
                             <div class="flex items-start justify-between gap-4">
                                 <div>
                                     <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }} / {{ $project['year'] }}</p>
@@ -93,6 +98,9 @@
                                     <span class="code-chip">{{ $tag }}</span>
                                 @endforeach
                             </div>
+                            @if ($project['image_credit'])
+                                <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-paper/42">{{ $project['image_credit'] }}</p>
+                            @endif
                         </article>
                     @endforeach
                 </div>

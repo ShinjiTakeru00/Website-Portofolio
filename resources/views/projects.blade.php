@@ -36,6 +36,16 @@
                                 <span>{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
                                 <span>{{ $project['year'] }}</span>
                             </div>
+                            @if ($project['image'])
+                                <figure class="my-6 overflow-hidden border border-line bg-panel">
+                                    <div class="aspect-[16/10]">
+                                        <img src="{{ asset($project['image']) }}" alt="{{ $project['image_alt'] }}" class="h-full w-full {{ $project['image_fit'] === 'contain' ? 'object-contain p-5' : 'object-cover' }}">
+                                    </div>
+                                    @if ($project['image_credit'])
+                                        <figcaption class="border-t border-line px-3 py-2 font-mono text-[10px] uppercase tracking-[0.14em] text-paper/42">{{ $project['image_credit'] }}</figcaption>
+                                    @endif
+                                </figure>
+                            @endif
                             <div>
                                 <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">{{ $project['type'] }}</p>
                                 <h2 class="mt-3 font-display text-3xl font-extrabold leading-tight text-paper">{{ $project['title'] }}</h2>

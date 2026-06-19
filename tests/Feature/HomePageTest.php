@@ -16,6 +16,8 @@ class HomePageTest extends TestCase
         $response->assertSee('Selected technical work');
         $response->assertSee('Five practical capability areas');
         $response->assertSee('Mobile Application Development');
+        $response->assertSee('images/Speaktoo.png');
+        $response->assertSee('images/UI UX.png');
         $response->assertSee('show all types');
         $response->assertSee('Android App Architecture');
         $response->assertSee('Network Design and Subnet Planning');
@@ -44,6 +46,10 @@ class HomePageTest extends TestCase
         $response->assertSee('Past Projects');
         $response->assertSee('Android Mobile Forensics Validation');
         $response->assertSee('Speaktoo');
+        $response->assertSee('images/project-network.jpg');
+        $response->assertSee('images/project-quantum.jpg');
+        $response->assertSee('images/project-code.jpg');
+        $response->assertSee('Representative image: Rawpixel / Public Domain');
         $response->assertSee('https://github.com/ShinjiTakeru00/speaktoo-bangkit2024');
         $response->assertSee('Short_Link_FP_Pemweb');
         $response->assertSee('github-archive');

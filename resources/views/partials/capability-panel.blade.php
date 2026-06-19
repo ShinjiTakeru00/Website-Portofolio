@@ -7,7 +7,16 @@
         <span class="font-mono text-xl text-paper/50 transition group-open:rotate-45">+</span>
     </summary>
     <div class="border-t border-line px-5 pb-5">
-        <p class="pt-5 leading-7 text-paper/68">{{ $group['summary'] }}</p>
+        <div class="grid gap-5 pt-5 md:grid-cols-[0.48fr_1fr]">
+            @if ($group['image'])
+                <figure class="overflow-hidden border border-line bg-ink">
+                    <div class="aspect-[16/11]">
+                        <img src="{{ asset($group['image']) }}" alt="{{ $group['image_alt'] }}" class="h-full w-full {{ $group['image_fit'] === 'contain' ? 'object-contain p-5' : 'object-cover' }}">
+                    </div>
+                </figure>
+            @endif
+            <p class="leading-7 text-paper/68">{{ $group['summary'] }}</p>
+        </div>
         <p class="mt-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">show all types</p>
         <div class="mt-3 grid gap-3">
             @foreach ($group['types'] as $type)

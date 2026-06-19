@@ -26,6 +26,10 @@ $portfolioData = function () {
                 'year' => '2025',
                 'status' => 'Thesis project',
                 'role' => 'DFIR Analyst',
+                'image' => null,
+                'image_alt' => null,
+                'image_credit' => null,
+                'image_fit' => 'cover',
                 'repo_url' => null,
                 'repo_links' => [],
                 'bullets' => [
@@ -43,6 +47,10 @@ $portfolioData = function () {
                 'year' => '2024',
                 'status' => 'Capstone project',
                 'role' => 'Mobile Developer',
+                'image' => 'images/Speaktoo.png',
+                'image_alt' => 'Speaktoo app logo with speech wave marks',
+                'image_credit' => 'Project asset',
+                'image_fit' => 'contain',
                 'repo_url' => 'https://github.com/ShinjiTakeru00/speaktoo-bangkit2024',
                 'repo_links' => [],
                 'bullets' => [
@@ -60,6 +68,10 @@ $portfolioData = function () {
                 'year' => '2024',
                 'status' => 'Web project',
                 'role' => 'Frontend Developer',
+                'image' => 'images/project-short-link-logo.png',
+                'image_alt' => 'AWK link shortener logo',
+                'image_credit' => 'Project asset',
+                'image_fit' => 'contain',
                 'repo_url' => 'https://github.com/ShinjiTakeru00/Short_Link_FP_Pemweb',
                 'repo_links' => [],
                 'bullets' => [
@@ -77,6 +89,10 @@ $portfolioData = function () {
                 'year' => '2023',
                 'status' => 'Academic labs',
                 'role' => 'Network Engineer',
+                'image' => 'images/project-network.jpg',
+                'image_alt' => 'Server racks and network cabling representing routing and infrastructure labs',
+                'image_credit' => 'Representative image: Rawpixel / Public Domain',
+                'image_fit' => 'cover',
                 'repo_url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-5-IT16',
                 'repo_links' => [
                     ['label' => 'Module 1', 'url' => 'https://github.com/ShinjiTakeru00/Jarkom-Modul-1-IT16-2023'],
@@ -100,6 +116,10 @@ $portfolioData = function () {
                 'year' => '2024',
                 'status' => 'Coursework repository',
                 'role' => 'Notebook Author',
+                'image' => 'images/project-quantum.jpg',
+                'image_alt' => 'Abstract quantum atom visualization representing quantum computing coursework',
+                'image_credit' => 'Representative image: Rawpixel / Public Domain',
+                'image_fit' => 'cover',
                 'repo_url' => 'https://github.com/ShinjiTakeru00/QuantumComputing',
                 'repo_links' => [],
                 'bullets' => [
@@ -117,6 +137,10 @@ $portfolioData = function () {
                 'year' => '2023',
                 'status' => 'Coursework repository',
                 'role' => 'Python Developer',
+                'image' => 'images/project-code.jpg',
+                'image_alt' => 'Code editor close-up representing Python programming coursework',
+                'image_credit' => 'Representative image: Rawpixel / Public Domain',
+                'image_fit' => 'cover',
                 'repo_url' => 'https://github.com/ShinjiTakeru00/Pemrograman-Integratif',
                 'repo_links' => [],
                 'bullets' => [
@@ -147,6 +171,9 @@ $portfolioData = function () {
             [
                 'title' => 'Mobile Application Development',
                 'summary' => 'Android application work from Bangkit Academy with clean architecture, cloud integration, and team delivery.',
+                'image' => 'images/Speaktoo.png',
+                'image_alt' => 'Speaktoo logo representing mobile application development',
+                'image_fit' => 'contain',
                 'items' => ['Kotlin', 'MVVM Android', 'Firebase Authentication', 'Firestore', 'Google Cloud Speech API', 'REST API Integration'],
                 'types' => [
                     [
@@ -169,6 +196,9 @@ $portfolioData = function () {
             [
                 'title' => 'Web & Frontend Engineering',
                 'summary' => 'Frontend implementation for practical web products, including routing, account-based flows, and API-backed interfaces.',
+                'image' => 'images/UI UX.png',
+                'image_alt' => 'High-fidelity UI/UX screen board representing frontend design work',
+                'image_fit' => 'cover',
                 'items' => ['Vue.js', 'JavaScript', 'HTML', 'CSS', 'Firebase', 'URL Validation', 'Component Architecture'],
                 'types' => [
                     [
@@ -191,6 +221,9 @@ $portfolioData = function () {
             [
                 'title' => 'Networking & Infrastructure',
                 'summary' => 'Academic network architecture labs covering routing, subnet planning, topology testing, and troubleshooting.',
+                'image' => 'images/project-network.jpg',
+                'image_alt' => 'Server rack and network cabling representing networking capability',
+                'image_fit' => 'cover',
                 'items' => ['TCP/IP', 'Subnetting', 'OSPF Routing', 'VLAN', 'NAT', 'Wireshark', 'Cisco Packet Tracer', 'Linux Configuration'],
                 'types' => [
                     [
@@ -213,6 +246,9 @@ $portfolioData = function () {
             [
                 'title' => 'Technical Analysis & Documentation',
                 'summary' => 'Structured investigation, reporting, evidence-minded thinking, and clear technical documentation for project handoff.',
+                'image' => 'images/project-code.jpg',
+                'image_alt' => 'Code close-up representing technical analysis and documentation',
+                'image_fit' => 'cover',
                 'items' => ['Problem Analysis', 'Technical Reporting', 'Digital Forensics Basics', 'NIST SP 800-86', 'Timeline Analysis', 'Postman API Testing'],
                 'types' => [
                     [
@@ -235,6 +271,9 @@ $portfolioData = function () {
             [
                 'title' => 'Team & Project Coordination',
                 'summary' => 'Leadership experience from HMIT, BEM FTEIC ITS, and ARA, focused on systems, training, delegation, and execution.',
+                'image' => 'images/UI UX.png',
+                'image_alt' => 'Interface planning board representing coordinated project delivery',
+                'image_fit' => 'cover',
                 'items' => ['Agile Collaboration', 'Git Workflow', 'Program Planning', 'Performance Dashboards', 'SOP Documentation', 'Stakeholder Coordination'],
                 'types' => [
                     [
