@@ -40,6 +40,9 @@ class HomePageTest extends TestCase
         $response->assertSee('Evan');
         $response->assertSee('Kusuma');
         $response->assertSee('Selected technical work');
+        $response->assertSee('data-project-slider', false);
+        $response->assertSee('data-project-slider-next', false);
+        $response->assertSee('system/navigation');
         $response->assertSee('Five practical capability areas');
         $response->assertSee('Mobile Application Development');
         $response->assertSee('images/Speaktoo.png');

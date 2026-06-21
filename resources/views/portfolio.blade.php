@@ -77,32 +77,46 @@
                     <p class="max-w-2xl text-base leading-8 text-paper/68 lg:justify-self-end">A tighter project surface for mobile apps, web products, network labs, analysis work, and GitHub-backed coursework.</p>
                 </div>
 
-                <div class="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    @foreach ($projects as $project)
-                        <article class="tech-card p-5">
-                            @if ($project['image'])
-                                <div class="mb-5 aspect-[16/10] overflow-hidden border border-line bg-ink">
-                                    <img src="{{ asset($project['image']) }}" alt="{{ $project['image_alt'] }}" class="h-full w-full {{ $project['image_fit'] === 'contain' ? 'object-contain p-5' : 'object-cover' }}">
+                <div class="mt-10 flex items-center justify-between gap-4">
+                    <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper/48">drag / wheel / arrow through the loop</p>
+                    <div class="flex gap-2">
+                        <button type="button" class="slider-button" data-project-slider-prev aria-label="Previous project">
+                            <i data-lucide="chevron-left" class="size-4"></i>
+                        </button>
+                        <button type="button" class="slider-button" data-project-slider-next aria-label="Next project">
+                            <i data-lucide="chevron-right" class="size-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-slider mt-5" data-project-slider>
+                    <div class="project-slider-track" data-project-slider-track>
+                        @foreach (array_merge($projects, $projects) as $project)
+                            <article class="tech-card project-slide p-5">
+                                @if ($project['image'])
+                                    <div class="mb-5 aspect-[16/10] overflow-hidden border border-line bg-ink">
+                                        <img src="{{ asset($project['image']) }}" alt="{{ $project['image_alt'] }}" class="h-full w-full {{ $project['image_fit'] === 'contain' ? 'object-contain p-5' : 'object-cover' }}">
+                                    </div>
+                                @endif
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">{{ str_pad(($loop->iteration - 1) % count($projects) + 1, 2, '0', STR_PAD_LEFT) }} / {{ $project['year'] }}</p>
+                                        <h3 class="mt-3 font-display text-2xl font-extrabold leading-tight text-paper">{{ $project['title'] }}</h3>
+                                    </div>
+                                    <span class="border border-line bg-ink px-2 py-1 font-mono text-[10px] font-bold uppercase text-cyan">{{ $project['role'] }}</span>
                                 </div>
-                            @endif
-                            <div class="flex items-start justify-between gap-4">
-                                <div>
-                                    <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }} / {{ $project['year'] }}</p>
-                                    <h3 class="mt-3 font-display text-2xl font-extrabold leading-tight text-paper">{{ $project['title'] }}</h3>
+                                <p class="mt-4 min-h-28 leading-7 text-paper/66">{{ $project['description'] }}</p>
+                                <div class="mt-5 flex flex-wrap gap-2">
+                                    @foreach (array_slice($project['tags'], 0, 4) as $tag)
+                                        <span class="code-chip">{{ $tag }}</span>
+                                    @endforeach
                                 </div>
-                                <span class="border border-line bg-ink px-2 py-1 font-mono text-[10px] font-bold uppercase text-cyan">{{ $project['role'] }}</span>
-                            </div>
-                            <p class="mt-4 min-h-28 leading-7 text-paper/66">{{ $project['description'] }}</p>
-                            <div class="mt-5 flex flex-wrap gap-2">
-                                @foreach (array_slice($project['tags'], 0, 4) as $tag)
-                                    <span class="code-chip">{{ $tag }}</span>
-                                @endforeach
-                            </div>
-                            @if ($project['image_credit'])
-                                <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-paper/42">{{ $project['image_credit'] }}</p>
-                            @endif
-                        </article>
-                    @endforeach
+                                @if ($project['image_credit'])
+                                    <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-paper/42">{{ $project['image_credit'] }}</p>
+                                @endif
+                            </article>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="mt-10">

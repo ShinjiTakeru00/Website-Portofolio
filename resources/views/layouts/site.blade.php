@@ -8,6 +8,22 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased">
+    <div class="route-loader" data-route-loader aria-hidden="true">
+        <div class="route-loader-panel">
+            <div class="terminal-bar">
+                <span>system/navigation</span>
+                <span class="text-terminal">loading</span>
+            </div>
+            <div class="p-5">
+                <p class="font-mono text-xs uppercase tracking-[0.18em] text-terminal">compiling route</p>
+                <div class="mt-4 h-2 overflow-hidden border border-line bg-ink">
+                    <span class="route-loader-bar"></span>
+                </div>
+                <p class="mt-4 font-mono text-sm text-paper/72">mounting blade view...</p>
+            </div>
+        </div>
+    </div>
+
     <header class="fixed inset-x-0 top-0 z-50 border-b border-line bg-ink/88 text-paper backdrop-blur">
         <nav class="section-shell flex min-h-16 items-center justify-between gap-4">
             <a href="{{ route('home') }}" class="font-mono text-sm font-extrabold tracking-[0.18em] text-terminal">evan.dk</a>

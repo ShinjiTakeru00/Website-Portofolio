@@ -84,4 +84,66 @@
     .code-chip {
         @apply border border-line bg-ink/70 px-3 py-1 font-mono text-xs font-bold text-paper/70;
     }
+
+    .project-slider {
+        @apply relative -mx-5 overflow-x-auto overflow-y-hidden border-y border-line px-5 py-2 sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10;
+        cursor: grab;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .project-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-slider.is-dragging {
+        cursor: grabbing;
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+    }
+
+    .project-slider-track {
+        @apply flex gap-4 py-4;
+        width: max-content;
+    }
+
+    .project-slide {
+        @apply w-[min(82vw,24rem)] shrink-0;
+        scroll-snap-align: start;
+    }
+
+    .slider-button {
+        @apply inline-flex size-11 items-center justify-center border border-line bg-ink transition hover:border-terminal hover:bg-terminal hover:text-ink focus:outline-none focus:ring-4 focus:ring-terminal/20;
+        color: rgba(242, 247, 244, 0.74);
+    }
+
+    .route-loader {
+        @apply pointer-events-none fixed inset-0 z-[100] grid place-items-center px-5 opacity-0 backdrop-blur transition-opacity duration-200;
+        background: rgba(7, 11, 15, 0.92);
+    }
+
+    .route-loader.is-active {
+        @apply pointer-events-auto opacity-100;
+    }
+
+    .route-loader-panel {
+        @apply w-full max-w-md border border-line bg-panel shadow-glow;
+    }
+
+    .route-loader-bar {
+        @apply block h-full bg-terminal;
+        width: 35%;
+        animation: route-loader-scan 0.9s ease-in-out infinite;
+    }
+}
+
+@keyframes route-loader-scan {
+    0% {
+        transform: translateX(-120%);
+    }
+
+    100% {
+        transform: translateX(320%);
+    }
 }
