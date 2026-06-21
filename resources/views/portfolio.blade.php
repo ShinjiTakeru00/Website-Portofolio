@@ -150,20 +150,68 @@
         </section>
 
         <section id="contact" class="py-20 sm:py-24">
-            <div class="section-shell grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+            <div class="section-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
                 <div>
                     <p class="eyebrow">~/contact</p>
                     <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper sm:text-5xl">Open to software, IT, network, and technical analyst opportunities.</h2>
                     <p class="mt-5 max-w-2xl text-lg leading-8 text-paper/70">Reach out for mobile or web development, network-focused work, technical documentation, project coordination, or entry-level IT roles.</p>
+                    <div class="mt-8 flex flex-col gap-3">
+                        <a href="mailto:{{ $profile['email'] }}" class="btn-secondary">
+                            <i data-lucide="mail" class="size-4"></i>
+                            {{ $profile['email'] }}
+                        </a>
+                        @foreach ($profile['links'] as $link)
+                            <a href="{{ $link['url'] }}" class="btn-secondary">{{ $link['label'] }}</a>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="flex flex-col gap-3">
-                    <a href="mailto:{{ $profile['email'] }}" class="btn-primary">
-                        <i data-lucide="mail" class="size-4"></i>
-                        {{ $profile['email'] }}
-                    </a>
-                    @foreach ($profile['links'] as $link)
-                        <a href="{{ $link['url'] }}" class="btn-secondary">{{ $link['label'] }}</a>
-                    @endforeach
+                <div class="tech-panel">
+                    <div class="terminal-bar">
+                        <span>backend/contact.store</span>
+                        <span class="text-terminal">POST</span>
+                    </div>
+                    <form action="{{ route('contact.store') }}" method="POST" class="grid gap-4 p-5 sm:p-6">
+                        @csrf
+                        @if (session('contact_status'))
+                            <div class="border border-terminal bg-terminal/10 px-4 py-3 font-mono text-sm text-terminal">
+                                {{ session('contact_status') }}
+                            </div>
+                        @endif
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <label class="grid gap-2 font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper/54">
+                                name
+                                <input name="name" value="{{ old('name') }}" autocomplete="name" class="min-h-12 border border-line bg-ink px-4 font-sans text-sm normal-case tracking-normal text-paper outline-none transition focus:border-terminal">
+                                @error('name')
+                                    <span class="font-sans text-xs normal-case tracking-normal text-ember">{{ $message }}</span>
+                                @enderror
+                            </label>
+                            <label class="grid gap-2 font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper/54">
+                                email
+                                <input name="email" value="{{ old('email') }}" type="email" autocomplete="email" class="min-h-12 border border-line bg-ink px-4 font-sans text-sm normal-case tracking-normal text-paper outline-none transition focus:border-terminal">
+                                @error('email')
+                                    <span class="font-sans text-xs normal-case tracking-normal text-ember">{{ $message }}</span>
+                                @enderror
+                            </label>
+                        </div>
+                        <label class="grid gap-2 font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper/54">
+                            subject
+                            <input name="subject" value="{{ old('subject') }}" class="min-h-12 border border-line bg-ink px-4 font-sans text-sm normal-case tracking-normal text-paper outline-none transition focus:border-terminal">
+                            @error('subject')
+                                <span class="font-sans text-xs normal-case tracking-normal text-ember">{{ $message }}</span>
+                            @enderror
+                        </label>
+                        <label class="grid gap-2 font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper/54">
+                            message
+                            <textarea name="message" rows="5" class="resize-y border border-line bg-ink px-4 py-3 font-sans text-sm normal-case tracking-normal text-paper outline-none transition focus:border-terminal">{{ old('message') }}</textarea>
+                            @error('message')
+                                <span class="font-sans text-xs normal-case tracking-normal text-ember">{{ $message }}</span>
+                            @enderror
+                        </label>
+                        <button type="submit" class="btn-primary justify-center">
+                            send message
+                            <i data-lucide="send" class="size-4"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactMessageController;
+use App\Models\ContactMessage;
 use Illuminate\Support\Facades\Route;
 
 $portfolioData = function () {
@@ -369,6 +371,10 @@ Route::get('/', function () use ($portfolioData) {
     return view('portfolio', compact('profile', 'projects', 'skillGroups', 'timeline'));
 })->name('home');
 
+Route::post('/contact', [ContactMessageController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contact.store');
+
 Route::get('/about', function () use ($portfolioData) {
     [
         'profile' => $profile,
@@ -390,3 +396,20 @@ Route::get('/projects', function () use ($portfolioData) {
 
     return view('projects', compact('profile', 'projects', 'githubRepos'));
 })->name('projects');
+
+Route::get('/backend/status', function () use ($portfolioData) {
+    $data = $portfolioData();
+
+    return response()->json([
+        'status' => 'ok',
+        'backend' => 'Laravel',
+        'storage' => [
+            'contact_messages' => ContactMessage::count(),
+        ],
+        'content' => [
+            'projects' => count($data['projects']),
+            'capability_groups' => count($data['skillGroups']),
+            'github_repositories' => count($data['githubRepos']),
+        ],
+    ]);
+})->name('backend.status');
