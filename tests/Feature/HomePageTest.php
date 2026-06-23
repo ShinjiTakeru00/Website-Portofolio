@@ -81,12 +81,19 @@ class HomePageTest extends TestCase
         $response = $this->get('/certificates');
 
         $response->assertOk();
-        $response->assertSee('Training credentials and proof of practice');
-        $response->assertSee('Most relevant credentials');
+        $response->assertSee('Certificate archive and CV skill map');
+        $response->assertSee('Cyber Security');
+        $response->assertSee('Programming &amp; Scripting', false);
+        $response->assertSee('All certificate covers');
+        $response->assertSee('Belajar Membuat Aplikasi Android untuk Pemula');
         $response->assertSee('Belajar Dasar Git dengan GitHub');
+        $response->assertSee('Cybersecurity Foundations');
         $response->assertSee('images/certificates/solid.png');
+        $response->assertSee('images/certificates/cybersecurity-foundations.png');
+        $response->assertSee('images/Certificate/Android Pemula.pdf');
         $response->assertSee('images/Certificate/Belajar Git.pdf');
-        $response->assertSee('How these credentials support the portfolio');
+        $response->assertDontSee('capability areas');
+        $response->assertDontSee('source proofs');
     }
 
     public function test_projects_page_loads(): void

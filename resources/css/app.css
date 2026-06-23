@@ -85,6 +85,22 @@
         @apply border border-line bg-ink/70 px-3 py-1 font-mono text-xs font-bold text-paper/70;
     }
 
+    .certificate-summary {
+        @apply block cursor-pointer list-none;
+    }
+
+    .certificate-summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .certificate-toggle {
+        @apply inline-flex min-h-9 items-center border border-line bg-ink px-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-paper/60 transition group-hover:border-terminal group-hover:text-terminal;
+    }
+
+    .certificate-tab[open] .certificate-toggle {
+        @apply border-terminal bg-terminal text-ink;
+    }
+
     .project-slider {
         @apply relative -mx-5 overflow-x-auto overflow-y-hidden border-y border-line px-5 py-2 sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10;
         cursor: grab;

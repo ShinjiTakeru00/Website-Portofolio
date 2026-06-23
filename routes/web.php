@@ -171,6 +171,15 @@ $portfolioData = function () {
         ],
         'certificates' => [
             [
+                'title' => 'Belajar Membuat Aplikasi Android untuk Pemula',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Android starter development and application fundamentals',
+                'date' => '2024',
+                'image' => 'images/certificates/android-pemula.png',
+                'pdf' => 'images/Certificate/Android Pemula.pdf',
+                'tags' => ['Android', 'Mobile', 'Beginner'],
+            ],
+            [
                 'title' => 'Belajar Pengembangan Aplikasi Android Intermediate',
                 'issuer' => 'Dicoding Indonesia',
                 'focus' => 'Android intermediate development',
@@ -187,6 +196,15 @@ $portfolioData = function () {
                 'image' => 'images/certificates/android-fundamental.png',
                 'pdf' => 'images/Certificate/Fundamental Android.pdf',
                 'tags' => ['Android', 'UI', 'Architecture'],
+            ],
+            [
+                'title' => 'Belajar Machine Learning untuk Android',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Machine learning concepts applied to Android products',
+                'date' => '2024',
+                'image' => 'images/certificates/machine-learning-android.png',
+                'pdf' => 'images/Certificate/machine learning Android.pdf',
+                'tags' => ['Android', 'Machine Learning', 'Mobile'],
             ],
             [
                 'title' => 'Memulai Pemrograman Dengan Kotlin',
@@ -207,6 +225,24 @@ $portfolioData = function () {
                 'tags' => ['SOLID', 'Clean Code', 'Design'],
             ],
             [
+                'title' => 'Memulai Dasar Pemrograman untuk Menjadi Pengembang Software',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Software development foundation and programming mindset',
+                'date' => '2024',
+                'image' => 'images/certificates/dasar-pemrograman.png',
+                'pdf' => 'images/Certificate/Mulai Dasar Pemrograman.pdf',
+                'tags' => ['Programming', 'Software', 'Foundation'],
+            ],
+            [
+                'title' => 'Logic 101',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Logic fundamentals for structured problem solving',
+                'date' => '2024',
+                'image' => 'images/certificates/logic-101.png',
+                'pdf' => 'images/Certificate/Logic 101.pdf',
+                'tags' => ['Logic', 'Problem Solving', 'Foundation'],
+            ],
+            [
                 'title' => 'Belajar Dasar Git dengan GitHub',
                 'issuer' => 'Dicoding Indonesia',
                 'focus' => 'Version control and GitHub workflow',
@@ -214,6 +250,58 @@ $portfolioData = function () {
                 'image' => 'images/certificates/git.png',
                 'pdf' => 'images/Certificate/Belajar Git.pdf',
                 'tags' => ['Git', 'GitHub', 'Workflow'],
+            ],
+            [
+                'title' => 'Belajar Dasar AI',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Artificial intelligence concepts and applied foundations',
+                'date' => '2024',
+                'image' => 'images/certificates/dasar-ai.png',
+                'pdf' => 'images/Certificate/Dasar AI.pdf',
+                'tags' => ['AI', 'Foundation', 'Technology'],
+            ],
+            [
+                'title' => 'Cybersecurity Foundations',
+                'issuer' => 'LinkedIn Learning',
+                'focus' => 'Cybersecurity concepts, risk thinking, and security fundamentals',
+                'date' => 'June 2026',
+                'image' => 'images/certificates/cybersecurity-foundations.png',
+                'pdf' => 'images/Certificate/CertificateOfCompletion_Cybersecurity Foundations.pdf',
+                'tags' => ['Cybersecurity', 'Risk', 'Security'],
+            ],
+        ],
+        'cvSkills' => [
+            [
+                'title' => 'Cyber Security',
+                'items' => ['Digital Forensics', 'Evidence Acquisition', 'Chain of Custody', 'Hash Validation', 'Artifact Extraction', 'ADB Forensics', 'Timeline Analysis', 'Incident Documentation', 'NIST SP 800-86'],
+            ],
+            [
+                'title' => 'Forensic Tools',
+                'items' => ['Cellebrite UFED', 'Cellebrite Physical Analyzer', 'Autopsy', 'FTK Imager', 'EnCase', 'Magnet AXIOM'],
+            ],
+            [
+                'title' => 'Security & Networking',
+                'items' => ['TCP/IP', 'Subnetting', 'OSPF Routing', 'VLAN', 'NAT', 'Firewall Concepts', 'Wireshark', 'Linux System Administration'],
+            ],
+            [
+                'title' => 'Programming & Scripting',
+                'items' => ['Python', 'Kotlin', 'Java', 'JavaScript', 'Shell Script'],
+            ],
+            [
+                'title' => 'Software & Web Development',
+                'items' => ['Vue.js', 'Firebase', 'REST API Integration', 'MVVM Android', 'UI/UX XML Layouting', 'Postman API Testing'],
+            ],
+            [
+                'title' => 'Databases & Cloud',
+                'items' => ['Firebase Firestore', 'MySQL', 'SQL Querying', 'Google Cloud Platform Foundations'],
+            ],
+            [
+                'title' => 'Tools & Platforms',
+                'items' => ['Git', 'GitHub', 'VirtualBox', 'Cisco Packet Tracer', 'Notion', 'Figma', 'Jira'],
+            ],
+            [
+                'title' => 'Soft Skills',
+                'items' => ['Analytical Reasoning', 'Problem Solving', 'Technical Reporting', 'Investigation Mindset', 'Team Collaboration', 'Leadership'],
             ],
         ],
         'skillGroups' => [
@@ -446,9 +534,9 @@ Route::get('/projects', function () use ($portfolioData) {
 })->name('projects');
 
 Route::get('/certificates', function () use ($portfolioData) {
-    ['profile' => $profile, 'certificates' => $certificates, 'skillGroups' => $skillGroups] = $portfolioData();
+    ['profile' => $profile, 'certificates' => $certificates, 'cvSkills' => $cvSkills] = $portfolioData();
 
-    return view('certificates', compact('profile', 'certificates', 'skillGroups'));
+    return view('certificates', compact('profile', 'certificates', 'cvSkills'));
 })->name('certificates');
 
 Route::get('/backend/status', function () use ($portfolioData) {

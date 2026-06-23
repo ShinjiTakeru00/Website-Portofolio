@@ -1,36 +1,34 @@
 @extends('layouts.site')
 
 @section('title', 'Certificates - '.$profile['name'])
-@section('description', 'Selected certificates and professional training credentials for '.$profile['name'].'.')
+@section('description', 'Certificate archive and CV skill map for '.$profile['name'].'.')
 
 @section('content')
     <main class="tech-section pt-16">
         <section class="border-b border-line py-20 sm:py-24">
-            <div class="section-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div class="section-shell grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
                 <div>
                     <p class="eyebrow">~/certificates</p>
-                    <h1 class="mt-4 font-display text-5xl font-extrabold uppercase leading-[0.92] text-paper sm:text-6xl">Training credentials and proof of practice.</h1>
+                    <h1 class="mt-4 font-display text-5xl font-extrabold uppercase leading-[0.92] text-paper sm:text-6xl">Certificate archive and CV skill map.</h1>
                 </div>
                 <div class="tech-panel">
                     <div class="terminal-bar">
-                        <span>credential.index</span>
-                        <span class="text-terminal">verified</span>
+                        <span>cv.skills</span>
+                        <span class="text-terminal">loaded</span>
                     </div>
                     <div class="p-6">
-                        <p class="font-mono text-sm leading-8 text-paper/72">A focused credential archive for Android development, Kotlin, maintainable programming principles, and Git-based collaboration.</p>
-                        <div class="mt-6 grid gap-px border border-line bg-line sm:grid-cols-3">
-                            <div class="bg-ink p-4">
-                                <p class="font-display text-3xl font-extrabold text-paper">{{ count($certificates) }}</p>
-                                <p class="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-paper/48">selected</p>
-                            </div>
-                            <div class="bg-ink p-4">
-                                <p class="font-display text-3xl font-extrabold text-paper">{{ count($skillGroups) }}</p>
-                                <p class="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-paper/48">capability areas</p>
-                            </div>
-                            <div class="bg-ink p-4">
-                                <p class="font-display text-3xl font-extrabold text-paper">PDF</p>
-                                <p class="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-paper/48">source proofs</p>
-                            </div>
+                        <p class="font-mono text-sm leading-8 text-paper/72">Skills are mapped from the CV and paired with all available certificate proofs in the local certificate archive.</p>
+                        <div class="mt-6 grid gap-3 md:grid-cols-2">
+                            @foreach ($cvSkills as $skillGroup)
+                                <article class="border border-line bg-ink p-4">
+                                    <h2 class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">{{ $skillGroup['title'] }}</h2>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        @foreach ($skillGroup['items'] as $skill)
+                                            <span class="code-chip">{{ $skill }}</span>
+                                        @endforeach
+                                    </div>
+                                </article>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -41,41 +39,15 @@
             <div class="section-shell">
                 <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
                     <div>
-                        <p class="eyebrow">~/featured</p>
-                        <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">Most relevant credentials.</h2>
+                        <p class="eyebrow">~/archive</p>
+                        <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">All certificate covers.</h2>
                     </div>
-                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">Prioritized around mobile development, clean software design, and collaborative engineering workflow.</p>
+                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">Each certificate starts as a cover card. Open a card to view its focus, tags, date, and original PDF proof.</p>
                 </div>
                 <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                     @foreach ($certificates as $certificate)
                         @include('partials.certificate-card', ['certificate' => $certificate])
                     @endforeach
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 sm:py-24">
-            <div class="section-shell grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
-                <div>
-                    <p class="eyebrow">~/mapping</p>
-                    <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">How these credentials support the portfolio.</h2>
-                </div>
-                <div class="grid gap-px border border-line bg-line md:grid-cols-3">
-                    <article class="bg-panel p-5">
-                        <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">mobile</p>
-                        <h3 class="mt-3 font-display text-xl font-extrabold text-paper">Android delivery</h3>
-                        <p class="mt-3 leading-7 text-paper/64">Android Intermediate, Android Fundamentals, and Kotlin support the Speaktoo mobile capstone story.</p>
-                    </article>
-                    <article class="bg-panel p-5">
-                        <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">engineering</p>
-                        <h3 class="mt-3 font-display text-xl font-extrabold text-paper">Maintainable code</h3>
-                        <p class="mt-3 leading-7 text-paper/64">SOLID training reinforces code structure, clean design, and long-term maintainability.</p>
-                    </article>
-                    <article class="bg-panel p-5">
-                        <p class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">workflow</p>
-                        <h3 class="mt-3 font-display text-xl font-extrabold text-paper">Version control</h3>
-                        <p class="mt-3 leading-7 text-paper/64">Git/GitHub training supports collaborative work across capstone, coursework, and portfolio repositories.</p>
-                    </article>
                 </div>
             </div>
         </section>
