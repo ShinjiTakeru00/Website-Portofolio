@@ -445,6 +445,12 @@ Route::get('/projects', function () use ($portfolioData) {
     return view('projects', compact('profile', 'projects', 'githubRepos'));
 })->name('projects');
 
+Route::get('/certificates', function () use ($portfolioData) {
+    ['profile' => $profile, 'certificates' => $certificates, 'skillGroups' => $skillGroups] = $portfolioData();
+
+    return view('certificates', compact('profile', 'certificates', 'skillGroups'));
+})->name('certificates');
+
 Route::get('/backend/status', function () use ($portfolioData) {
     $data = $portfolioData();
 

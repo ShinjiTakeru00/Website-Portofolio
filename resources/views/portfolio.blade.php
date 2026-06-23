@@ -177,7 +177,7 @@
                         @include('partials.certificate-card', ['certificate' => $certificate])
                     @endforeach
                 </div>
-                <a href="{{ route('about') }}#certificates" class="btn-secondary mt-8">
+                <a href="{{ route('certificates') }}" class="btn-secondary mt-8">
                     view all credentials
                     <i data-lucide="arrow-up-right" class="size-4"></i>
                 </a>

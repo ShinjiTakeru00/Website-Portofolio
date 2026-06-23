@@ -54,6 +54,7 @@ class HomePageTest extends TestCase
         $response->assertSee('Network Design and Subnet Planning');
         $response->assertSee('~/about');
         $response->assertSee('~/projects');
+        $response->assertSee('~/certs');
         $response->assertSee('Credential highlights');
         $response->assertSee('images/certificates/android-intermediate.png');
         $response->assertSee('Belajar Fundamental Aplikasi Android');
@@ -71,9 +72,21 @@ class HomePageTest extends TestCase
         $response->assertSee('Operational Planning and Execution');
         $response->assertSee('Institut Teknologi Sepuluh Nopember');
         $response->assertSee('Himpunan Mahasiswa Teknologi Informasi ITS');
-        $response->assertSee('Selected certificates');
+        $response->assertSee('Credentials now have their own page');
+        $response->assertSee(route('certificates', absolute: false));
+    }
+
+    public function test_certificates_page_loads(): void
+    {
+        $response = $this->get('/certificates');
+
+        $response->assertOk();
+        $response->assertSee('Training credentials and proof of practice');
+        $response->assertSee('Most relevant credentials');
         $response->assertSee('Belajar Dasar Git dengan GitHub');
         $response->assertSee('images/certificates/solid.png');
+        $response->assertSee('images/Certificate/Belajar Git.pdf');
+        $response->assertSee('How these credentials support the portfolio');
     }
 
     public function test_projects_page_loads(): void

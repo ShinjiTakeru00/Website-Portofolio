@@ -33,6 +33,7 @@
             <div id="site-nav" data-nav-menu class="absolute left-5 right-5 top-20 hidden gap-3 border border-line bg-panel p-4 shadow-soft md:static md:flex md:border-0 md:bg-transparent md:p-0 md:shadow-none">
                 <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'text-terminal' : 'text-paper/68' }}">~/home</a>
                 <a href="{{ route('projects') }}" class="nav-link {{ request()->routeIs('projects') ? 'text-terminal' : 'text-paper/68' }}">~/projects</a>
+                <a href="{{ route('certificates') }}" class="nav-link {{ request()->routeIs('certificates') ? 'text-terminal' : 'text-paper/68' }}">~/certs</a>
                 <a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'text-terminal' : 'text-paper/68' }}">~/about</a>
                 <a href="{{ route('home') }}#contact" class="nav-link text-paper/68">~/contact</a>
             </div>

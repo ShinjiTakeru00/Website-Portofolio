@@ -75,18 +75,37 @@
         </section>
 
         <section id="certificates" class="border-b border-line bg-panel/54 py-20 sm:py-24">
-            <div class="section-shell">
-                <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-                    <div>
-                        <p class="eyebrow">~/certificates</p>
-                        <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">Selected certificates.</h2>
-                    </div>
-                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">The most relevant credentials for mobile development, maintainable programming practice, and collaborative Git-based delivery.</p>
+            <div class="section-shell grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+                <div>
+                    <p class="eyebrow">~/certificates</p>
+                    <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">Credentials now have their own page.</h2>
+                    <p class="mt-5 leading-8 text-paper/68">The full certificate archive is separated from the resume narrative so recruiters can inspect proof of training without interrupting the about flow.</p>
                 </div>
-                <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    @foreach ($certificates as $certificate)
-                        @include('partials.certificate-card', ['certificate' => $certificate])
-                    @endforeach
+                <div class="tech-panel p-6">
+                    <p class="font-mono text-xs font-bold uppercase tracking-[0.18em] text-terminal">credential index</p>
+                    <div class="mt-6 grid gap-px border border-line bg-line sm:grid-cols-3">
+                        <div class="bg-ink p-4">
+                            <p class="font-display text-3xl font-extrabold text-paper">{{ count($certificates) }}</p>
+                            <p class="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-paper/48">selected certs</p>
+                        </div>
+                        <div class="bg-ink p-4">
+                            <p class="font-display text-3xl font-extrabold text-paper">5</p>
+                            <p class="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-paper/48">pdf proofs</p>
+                        </div>
+                        <div class="bg-ink p-4">
+                            <p class="font-display text-3xl font-extrabold text-paper">3</p>
+                            <p class="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-paper/48">core themes</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        @foreach (['Android', 'Kotlin', 'SOLID', 'GitHub'] as $tag)
+                            <span class="code-chip">{{ $tag }}</span>
+                        @endforeach
+                    </div>
+                    <a href="{{ route('certificates') }}" class="btn-primary mt-7">
+                        open certificate index
+                        <i data-lucide="arrow-up-right" class="size-4"></i>
+                    </a>
                 </div>
             </div>
         </section>
