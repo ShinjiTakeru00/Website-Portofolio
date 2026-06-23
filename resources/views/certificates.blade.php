@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Certificates - '.$profile['name'])
-@section('description', 'Certificate archive and CV skill map for '.$profile['name'].'.')
+@section('description', 'Certificates, CV skills, Android development, programming, AI, GitHub, and cybersecurity foundations for '.$profile['name'].'.')
 
 @section('content')
     <main class="tech-section pt-16">
@@ -10,7 +10,7 @@
                 <div class="max-w-4xl">
                     <p class="eyebrow">~/certificates</p>
                     <h1 class="mt-4 font-display text-5xl font-extrabold uppercase leading-[0.92] text-paper sm:text-6xl">Certificate archive and CV skill map.</h1>
-                    <p class="mt-6 max-w-2xl leading-8 text-paper/68">Skills are mapped from the CV and paired with all available certificate proofs in the local certificate archive.</p>
+                    <p class="mt-6 max-w-2xl leading-8 text-paper/68">CV skills covering Android development, programming, networking, databases, cloud foundations, technical tooling, documentation, and collaboration.</p>
                 </div>
                 <div class="tech-panel mt-10">
                     <div class="terminal-bar">
@@ -42,7 +42,7 @@
                         <p class="eyebrow">~/archive</p>
                         <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">All certificate covers.</h2>
                     </div>
-                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">Each certificate starts as a cover card. Open a card to view its focus, tags, date, and original PDF proof.</p>
+                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">Certificate records covering Android development, Kotlin, programming fundamentals, SOLID principles, Git and GitHub, AI basics, logic, and cybersecurity foundations.</p>
                 </div>
                 <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                     @foreach ($certificates as $certificate)
