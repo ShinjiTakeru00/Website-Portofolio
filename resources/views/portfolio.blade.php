@@ -163,6 +163,27 @@
             </div>
         </section>
 
+        <section id="certificates" class="border-b border-line py-20 sm:py-24">
+            <div class="section-shell">
+                <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+                    <div>
+                        <p class="eyebrow">~/certificates</p>
+                        <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper sm:text-5xl">Credential highlights.</h2>
+                    </div>
+                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">A focused set of certificates that support the mobile, software engineering, and version-control side of the portfolio.</p>
+                </div>
+                <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    @foreach (array_slice($certificates, 0, 3) as $certificate)
+                        @include('partials.certificate-card', ['certificate' => $certificate])
+                    @endforeach
+                </div>
+                <a href="{{ route('about') }}#certificates" class="btn-secondary mt-8">
+                    view all credentials
+                    <i data-lucide="arrow-up-right" class="size-4"></i>
+                </a>
+            </div>
+        </section>
+
         <section id="contact" class="py-20 sm:py-24">
             <div class="section-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
                 <div>

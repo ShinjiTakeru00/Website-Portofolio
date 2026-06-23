@@ -169,6 +169,53 @@ $portfolioData = function () {
         'skills' => [
             'Mobile Development', 'Web Development', 'Networking', 'Technical Analysis', 'Project Leadership',
         ],
+        'certificates' => [
+            [
+                'title' => 'Belajar Pengembangan Aplikasi Android Intermediate',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Android intermediate development',
+                'date' => 'June 2024',
+                'image' => 'images/certificates/android-intermediate.png',
+                'pdf' => 'images/Certificate/Peengembangan Aplikasi Android Intermediate.pdf',
+                'tags' => ['Android', 'Kotlin', 'Mobile'],
+            ],
+            [
+                'title' => 'Belajar Fundamental Aplikasi Android',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Android fundamentals and app architecture',
+                'date' => 'May 2024',
+                'image' => 'images/certificates/android-fundamental.png',
+                'pdf' => 'images/Certificate/Fundamental Android.pdf',
+                'tags' => ['Android', 'UI', 'Architecture'],
+            ],
+            [
+                'title' => 'Memulai Pemrograman Dengan Kotlin',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Kotlin programming foundation',
+                'date' => '2024',
+                'image' => 'images/certificates/kotlin.png',
+                'pdf' => 'images/Certificate/Pemrograman Kotlin.pdf',
+                'tags' => ['Kotlin', 'OOP', 'Mobile'],
+            ],
+            [
+                'title' => 'Belajar Prinsip Pemrograman SOLID',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Clean code and maintainable design',
+                'date' => '2024',
+                'image' => 'images/certificates/solid.png',
+                'pdf' => 'images/Certificate/Pemrograman SOLID.pdf',
+                'tags' => ['SOLID', 'Clean Code', 'Design'],
+            ],
+            [
+                'title' => 'Belajar Dasar Git dengan GitHub',
+                'issuer' => 'Dicoding Indonesia',
+                'focus' => 'Version control and GitHub workflow',
+                'date' => '2024',
+                'image' => 'images/certificates/git.png',
+                'pdf' => 'images/Certificate/Belajar Git.pdf',
+                'tags' => ['Git', 'GitHub', 'Workflow'],
+            ],
+        ],
         'skillGroups' => [
             [
                 'title' => 'Mobile Application Development',
@@ -366,9 +413,9 @@ $portfolioData = function () {
 };
 
 Route::get('/', function () use ($portfolioData) {
-    ['profile' => $profile, 'projects' => $projects, 'skillGroups' => $skillGroups, 'timeline' => $timeline] = $portfolioData();
+    ['profile' => $profile, 'projects' => $projects, 'skillGroups' => $skillGroups, 'timeline' => $timeline, 'certificates' => $certificates] = $portfolioData();
 
-    return view('portfolio', compact('profile', 'projects', 'skillGroups', 'timeline'));
+    return view('portfolio', compact('profile', 'projects', 'skillGroups', 'timeline', 'certificates'));
 })->name('home');
 
 Route::post('/contact', [ContactMessageController::class, 'store'])
@@ -386,9 +433,10 @@ Route::get('/about', function () use ($portfolioData) {
         'experiences' => $experiences,
         'education' => $education,
         'languages' => $languages,
+        'certificates' => $certificates,
     ] = $portfolioData();
 
-    return view('about', compact('profile', 'skills', 'skillGroups', 'timeline', 'principles', 'services', 'experiences', 'education', 'languages'));
+    return view('about', compact('profile', 'skills', 'skillGroups', 'timeline', 'principles', 'services', 'experiences', 'education', 'languages', 'certificates'));
 })->name('about');
 
 Route::get('/projects', function () use ($portfolioData) {

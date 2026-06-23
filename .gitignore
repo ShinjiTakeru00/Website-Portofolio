@@ -3,6 +3,12 @@
 /public/build
 /public/files
 /public/hot
+/public/images/Certificate/*.pdf
+!/public/images/Certificate/Belajar Git.pdf
+!/public/images/Certificate/Fundamental Android.pdf
+!/public/images/Certificate/Peengembangan Aplikasi Android Intermediate.pdf
+!/public/images/Certificate/Pemrograman Kotlin.pdf
+!/public/images/Certificate/Pemrograman SOLID.pdf
 /.env
 /.phpunit.cache
 /bootstrap/cache/*.php

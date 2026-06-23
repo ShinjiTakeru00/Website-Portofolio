@@ -54,6 +54,9 @@ class HomePageTest extends TestCase
         $response->assertSee('Network Design and Subnet Planning');
         $response->assertSee('~/about');
         $response->assertSee('~/projects');
+        $response->assertSee('Credential highlights');
+        $response->assertSee('images/certificates/android-intermediate.png');
+        $response->assertSee('Belajar Fundamental Aplikasi Android');
         $response->assertSee('backend/contact.store');
         $response->assertDontSee('CV_Evan_Darya_Kusuma.pdf');
     }
@@ -68,6 +71,9 @@ class HomePageTest extends TestCase
         $response->assertSee('Operational Planning and Execution');
         $response->assertSee('Institut Teknologi Sepuluh Nopember');
         $response->assertSee('Himpunan Mahasiswa Teknologi Informasi ITS');
+        $response->assertSee('Selected certificates');
+        $response->assertSee('Belajar Dasar Git dengan GitHub');
+        $response->assertSee('images/certificates/solid.png');
     }
 
     public function test_projects_page_loads(): void

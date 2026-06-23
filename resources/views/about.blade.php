@@ -74,6 +74,23 @@
             </div>
         </section>
 
+        <section id="certificates" class="border-b border-line bg-panel/54 py-20 sm:py-24">
+            <div class="section-shell">
+                <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+                    <div>
+                        <p class="eyebrow">~/certificates</p>
+                        <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">Selected certificates.</h2>
+                    </div>
+                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">The most relevant credentials for mobile development, maintainable programming practice, and collaborative Git-based delivery.</p>
+                </div>
+                <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    @foreach ($certificates as $certificate)
+                        @include('partials.certificate-card', ['certificate' => $certificate])
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
         <section class="border-b border-line bg-panel/54 py-20 sm:py-24">
             <div class="section-shell grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
                 <div>
