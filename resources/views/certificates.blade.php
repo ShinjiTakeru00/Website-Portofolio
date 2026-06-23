@@ -6,19 +6,19 @@
 @section('content')
     <main class="tech-section pt-16">
         <section class="border-b border-line py-20 sm:py-24">
-            <div class="section-shell grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-                <div>
+            <div class="section-shell">
+                <div class="max-w-4xl">
                     <p class="eyebrow">~/certificates</p>
                     <h1 class="mt-4 font-display text-5xl font-extrabold uppercase leading-[0.92] text-paper sm:text-6xl">Certificate archive and CV skill map.</h1>
+                    <p class="mt-6 max-w-2xl leading-8 text-paper/68">Skills are mapped from the CV and paired with all available certificate proofs in the local certificate archive.</p>
                 </div>
-                <div class="tech-panel">
+                <div class="tech-panel mt-10">
                     <div class="terminal-bar">
                         <span>cv.skills</span>
                         <span class="text-terminal">loaded</span>
                     </div>
                     <div class="p-6">
-                        <p class="font-mono text-sm leading-8 text-paper/72">Skills are mapped from the CV and paired with all available certificate proofs in the local certificate archive.</p>
-                        <div class="mt-6 grid gap-3 md:grid-cols-2">
+                        <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
                             @foreach ($cvSkills as $skillGroup)
                                 <article class="border border-line bg-ink p-4">
                                     <h2 class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-terminal">{{ $skillGroup['title'] }}</h2>
