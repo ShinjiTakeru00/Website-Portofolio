@@ -88,10 +88,17 @@ class HomePageTest extends TestCase
         $response->assertSee('Belajar Membuat Aplikasi Android untuk Pemula');
         $response->assertSee('Belajar Dasar Git dengan GitHub');
         $response->assertSee('Cybersecurity Foundations');
+        $response->assertSee('Level Up: Advanced SQL');
+        $response->assertSee('Project Management Foundations');
+        $response->assertSee('Succeeding as a First-Time Tech Manager');
         $response->assertSee('images/certificates/solid.png');
         $response->assertSee('images/certificates/cybersecurity-foundations.png');
+        $response->assertSee('images/certificates/advanced-sql.png');
+        $response->assertSee('images/certificates/project-management-foundations.png');
+        $response->assertSee('images/certificates/first-time-tech-manager.png');
         $response->assertSee('images/Certificate/Android Pemula.pdf');
         $response->assertSee('images/Certificate/Belajar Git.pdf');
+        $response->assertSee('images/Certificate/CertificateOfCompletion_Level Up Advanced SQL.pdf');
         $response->assertDontSee('capability areas');
         $response->assertDontSee('source proofs');
     }

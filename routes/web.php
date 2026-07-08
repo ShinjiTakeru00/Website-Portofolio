@@ -269,6 +269,33 @@ $portfolioData = function () {
                 'pdf' => 'images/Certificate/CertificateOfCompletion_Cybersecurity Foundations.pdf',
                 'tags' => ['Cybersecurity', 'Risk', 'Security'],
             ],
+            [
+                'title' => 'Level Up: Advanced SQL',
+                'issuer' => 'LinkedIn Learning',
+                'focus' => 'Advanced SQL querying and database query skills',
+                'date' => 'July 2026',
+                'image' => 'images/certificates/advanced-sql.png',
+                'pdf' => 'images/Certificate/CertificateOfCompletion_Level Up Advanced SQL.pdf',
+                'tags' => ['SQL', 'Database Queries', 'Data'],
+            ],
+            [
+                'title' => 'Project Management Foundations',
+                'issuer' => 'LinkedIn Learning',
+                'focus' => 'Project management fundamentals for planning and delivery',
+                'date' => 'June 2026',
+                'image' => 'images/certificates/project-management-foundations.png',
+                'pdf' => 'images/Certificate/CertificateOfCompletion_Project Management Foundations.pdf',
+                'tags' => ['Project Management', 'Planning', 'Delivery'],
+            ],
+            [
+                'title' => 'Succeeding as a First-Time Tech Manager',
+                'issuer' => 'LinkedIn Learning',
+                'focus' => 'Technical leadership, management development, and team guidance',
+                'date' => 'July 2026',
+                'image' => 'images/certificates/first-time-tech-manager.png',
+                'pdf' => 'images/Certificate/CertificateOfCompletion_Succeeding as a FirstTime Tech Manager.pdf',
+                'tags' => ['Leadership', 'Management', 'Teams'],
+            ],
         ],
         'cvSkills' => [
             [

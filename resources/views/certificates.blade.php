@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Certificates - '.$profile['name'])
-@section('description', 'Certificates, CV skills, Android development, programming, AI, GitHub, and cybersecurity foundations for '.$profile['name'].'.')
+@section('description', 'Certificates, CV skills, Android development, programming, SQL, project management, AI, GitHub, and cybersecurity foundations for '.$profile['name'].'.')
 
 @section('content')
     <main class="tech-section pt-16">
@@ -42,7 +42,7 @@
                         <p class="eyebrow">~/archive</p>
                         <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight text-paper">All certificate covers.</h2>
                     </div>
-                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">Certificate records covering Android development, Kotlin, programming fundamentals, SOLID principles, Git and GitHub, AI basics, logic, and cybersecurity foundations.</p>
+                    <p class="max-w-2xl leading-8 text-paper/68 lg:justify-self-end">Certificate records covering Android development, Kotlin, programming fundamentals, SOLID principles, Git and GitHub, SQL, project management, technical leadership, AI basics, logic, and cybersecurity foundations.</p>
                 </div>
                 <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                     @foreach ($certificates as $certificate)
