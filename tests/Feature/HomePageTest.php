@@ -91,14 +91,17 @@ class HomePageTest extends TestCase
         $response->assertSee('Level Up: Advanced SQL');
         $response->assertSee('Project Management Foundations');
         $response->assertSee('Succeeding as a First-Time Tech Manager');
+        $response->assertSee('Succeeding as a First-Time Tech Manager - CompTIA CEU');
         $response->assertSee('images/certificates/solid.png');
         $response->assertSee('images/certificates/cybersecurity-foundations.png');
         $response->assertSee('images/certificates/advanced-sql.png');
         $response->assertSee('images/certificates/project-management-foundations.png');
         $response->assertSee('images/certificates/first-time-tech-manager.png');
+        $response->assertSee('images/certificates/first-time-tech-manager-comptia.png');
         $response->assertSee('images/Certificate/Android Pemula.pdf');
         $response->assertSee('images/Certificate/Belajar Git.pdf');
         $response->assertSee('images/Certificate/CertificateOfCompletion_Level Up Advanced SQL.pdf');
+        $response->assertSee('images/Certificate/CertificateOfCompletion_Succeeding as a FirstTime Tech Manager (1).pdf');
         $response->assertDontSee('capability areas');
         $response->assertDontSee('source proofs');
     }

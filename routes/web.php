@@ -296,6 +296,15 @@ $portfolioData = function () {
                 'pdf' => 'images/Certificate/CertificateOfCompletion_Succeeding as a FirstTime Tech Manager.pdf',
                 'tags' => ['Leadership', 'Management', 'Teams'],
             ],
+            [
+                'title' => 'Succeeding as a First-Time Tech Manager - CompTIA CEU',
+                'issuer' => 'LinkedIn Learning',
+                'focus' => 'Technical management course with CompTIA continuing education unit recognition',
+                'date' => 'July 2026',
+                'image' => 'images/certificates/first-time-tech-manager-comptia.png',
+                'pdf' => 'images/Certificate/CertificateOfCompletion_Succeeding as a FirstTime Tech Manager (1).pdf',
+                'tags' => ['CompTIA CEU', 'Leadership', 'Management'],
+            ],
         ],
         'cvSkills' => [
             [
